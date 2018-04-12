@@ -1,0 +1,30 @@
+# Username of admin user
+aem_security_admin_user: admin
+
+# New Password, set together with aem_security_admin_password_old to change the password
+# aem_security_admin_password_new: admin
+
+# Old password, set if you want to change to the new password
+aem_security_admin_password_old: admin
+
+# Port and package manager service URL of the AEM instance
+aem_security_aem_port: 4502
+
+# Base URL of the AEM instance
+aem_security_url_base: "http://{{ inventory_hostname }}:{{ aem_security_aem_port }}"
+
+# URL for user info
+aem_security_url_userinfo: "{{ aem_security_url_base }}/bin/querybuilder.json?path=/home/users&1_property=rep:authorizableId&1_property.value={{ aem_security_admin_user }}&p.limit=-1"
+
+# URL for password check
+aem_security_url_password_check: "{{ aem_security_url_base }}/crx/de/j_security_check"
+
+# Expected http code for a valid password
+aem_security_url_password_valid_code: 403
+
+# Expected http code for an invalid password
+aem_security_url_password_invalid_code: 401
+
+# URL used for setting the new password
+aem_security_url_password_set: "{{ aem_security_url_base }}/crx/explorer/ui/setpassword.jsp"
+
