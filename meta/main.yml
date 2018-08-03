@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: aem_security
   author: Tobias Richter
   description: Applies AEM security changes
   company: pro!vision
