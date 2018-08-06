@@ -1,4 +1,4 @@
-# wcm-io-devops.aem-security
+# wcm_io_devops.aem_security
 
 This Role applies security changes to an AEM instance.
 
@@ -22,7 +22,7 @@ Especially these two places are from interest:
 ## Usages
 
 This role is used by the Ansible role
-[wcm-io-devops.conga-aem-cms](https://github.com/wcm-io-devops/ansible-conga-aem-cms)
+[wcm_io_devops.conga_aem_cms](https://github.com/wcm-io-devops/ansible-conga-aem-cms)
 to change the admin password during instance setup.
 
 ## Requirements
@@ -87,7 +87,7 @@ Changes the admin password from "admin" to "password".
     aem_security_admin_password_new: password
     aem_security_admin_password_old: admin
   roles:
-    - wcm-io-devops.aem-security
+    - wcm_io_devops.aem_security
 ```
 
 ## License
