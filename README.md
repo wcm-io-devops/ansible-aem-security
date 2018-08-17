@@ -49,7 +49,7 @@ Old password, set if you want to change to the new password.
 
 Port and package manager service URL of the AEM instance.
 
-        aem_security_url_base: "http://{{ inventory_hostname }}:{{ aem_security_aem_port }}"
+        aem_security_url_base: "http://localhost:{{ aem_security_aem_port }}"
 
 Base url for the AEM instance.
 
