@@ -11,7 +11,7 @@ aem_security_admin_password_old: admin
 aem_security_aem_port: 4502
 
 # Base URL of the AEM instance
-aem_security_url_base: "http://{{ inventory_hostname }}:{{ aem_security_aem_port }}"
+aem_security_url_base: "http://localhost:{{ aem_security_aem_port }}"
 
 # URL for user info
 aem_security_url_userinfo: "{{ aem_security_url_base }}/bin/querybuilder.json?path=/home/users&1_property=rep:authorizableId&1_property.value={{ aem_security_admin_user }}&p.limit=-1"
