@@ -2,6 +2,12 @@
 
 This Role applies security changes to an AEM instance.
 
+> This role was developed as part of the
+> [wcm.io DevOps Ansible Automation for AEM](http://devops.wcm.io/ansible-aem/)
+> to integrate Ansible with
+> [CONGA](http://devops.wcm.io/conga/) but can be used independently of
+> it.
+
 ## admin user password change
 
 At the moment only the password change for the admin user is
