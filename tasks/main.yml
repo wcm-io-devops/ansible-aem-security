@@ -3,9 +3,9 @@
   when:
     - aem_security_admin_user is defined
     - aem_security_admin_password_new is defined
-    - aem_security_admin_password_new != ""
+    - aem_security_admin_password_new | length > 0
     - aem_security_admin_password_old is defined
-    - aem_security_admin_password_old != ""
+    - aem_security_admin_password_old | length > 0
     - aem_security_admin_password_new != aem_security_admin_password_old
   tags:
     - skip_ansible_lint
