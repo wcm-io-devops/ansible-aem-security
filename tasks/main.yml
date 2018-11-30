@@ -1,5 +1,5 @@
 - name: Set admin password
-  include: set-admin-password.yml
+  include_tasks: set-admin-password.yml
   when:
     - aem_security_admin_user | default("") | string | length > 0
     - aem_security_admin_password_new | default("") | string | length > 0
