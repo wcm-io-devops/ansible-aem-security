@@ -33,7 +33,7 @@ to change the admin password during instance setup.
 
 ## Requirements
 
-This role requires Ansible 2.0 or higher and was tested with AEM 6.3
+This role requires Ansible 2.7 or higher and was tested with AEM 6.3
 
 ## Role Variables
 
