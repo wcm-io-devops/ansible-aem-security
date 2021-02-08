@@ -1,3 +1,4 @@
+---
 - name: Set admin password
   include_tasks: set-admin-password.yml
   when:
