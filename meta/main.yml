@@ -1,6 +1,7 @@
 ---
 galaxy_info:
   role_name: aem_security
+  namespace: wcm_io_devops
   author: Tobias Richter
   description: Applies AEM security changes
   company: pro!vision
