@@ -33,7 +33,7 @@ to change the admin password during instance setup.
 
 ## Requirements
 
-This role requires Ansible 2.7 or higher and was tested with AEM 6.3
+This role requires Ansible 2.10 or higher (needed for FQCN builtin module references) and was tested with AEM 6.3
 
 ## Role Variables
 
@@ -75,9 +75,12 @@ Expected http code for a valid password.
 
 Expected http code for an invalid password.
 
-        aem_security_url_password_set: "{{ aem_security_url_base }}/crx/explorer/ui/setpassword.jsp"
-
-URL used for setting the new password.
+The new password is applied by posting the `rep:password` property directly
+to the admin user's JCR node (found via `aem_security_url_userinfo`), using
+`aem_security_url_base` as the request base URL. This works both on classic
+AEM (6.5/6.5 LTS) and AEMaaCS/Cloud SDK, unlike the previously used
+`/crx/explorer/ui/setpassword.jsp`, which is JSP-based and no longer
+functional on AEMaaCS/Cloud SDK instances.
 
 ## Dependencies
 

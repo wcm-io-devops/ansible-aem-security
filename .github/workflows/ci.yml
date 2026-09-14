@@ -23,20 +23,20 @@ jobs:
       matrix:
         include:
           - NAME: min_ansible_version
-            ANSIBLE_VERSION: "==2.7.*"
-            ANSIBLE_LINT_VERSION: "==4.2.*"
+            ANSIBLE_VERSION: "==2.10.*"
+            ANSIBLE_LINT_VERSION: "==5.4.*"
           - NAME: latest
             ANSIBLE_VERSION: ""
             ANSIBLE_LINT_VERSION: ""
 
     steps:
       - name: Check out the codebase.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: '${{ env.ROLE_NAME }}'
 
       - name: Cache PIP
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ matrix.ANSIBLE_VERSION }}-${{ hashFiles('**/requirements.txt') }}
@@ -47,7 +47,7 @@ jobs:
         run: "printf '[defaults]\nroles_path=./tests/requirements/:../' > ansible.cfg"
 
       - name: Set up Python 3.
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9.x'
 
